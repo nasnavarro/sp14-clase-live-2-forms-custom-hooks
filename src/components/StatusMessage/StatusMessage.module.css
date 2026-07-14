@@ -1,0 +1,24 @@
+.box {
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.neutral {
+  background-color: #ede9fe;
+  color: #111827;
+}
+
+.error {
+  background-color: #fee2e2;
+  color: #7f1d1d;
+}
+
+.title {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.description {
+  margin: 0;
+}

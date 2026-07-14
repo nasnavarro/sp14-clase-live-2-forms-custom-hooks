@@ -1,0 +1,52 @@
+.page {
+  padding: 2rem 0 3rem;
+}
+
+.card {
+  width: min(520px, 100%);
+  padding: 1.5rem;
+  border: 1px solid #ddd6fe;
+  border-radius: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 50px rgba(76, 29, 149, 0.08);
+}
+
+.label {
+  margin: 0 0 0.5rem;
+  color: #6d28d9;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0 0 1rem;
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+  font-weight: 600;
+}
+
+.field input {
+  padding: 0.85rem 1rem;
+  border: 1px solid #c4b5fd;
+  border-radius: 0.85rem;
+}
+
+.button {
+  padding: 0.85rem 1rem;
+  border: 0;
+  border-radius: 999px;
+  background-color: #6d28d9;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
