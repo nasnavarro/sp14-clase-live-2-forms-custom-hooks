@@ -11,6 +11,7 @@ function RegisterPage() {
     email: "",
     password: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState("")
 
   function handleChange(event) {
@@ -28,10 +29,13 @@ function RegisterPage() {
     }
 
     try {
+      setIsSubmitting(true)
       await registerUser(formData)
       navigate("/login")
     } catch (submitError) {
       setError("No se pudo completar el registro")
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -58,6 +62,7 @@ function RegisterPage() {
               value={formData.name}
               placeholder="Ada Lovelace"
               onChange={handleChange}
+              disabled={isSubmitting}
             />
           </label>
 
@@ -69,6 +74,7 @@ function RegisterPage() {
               value={formData.email}
               placeholder="ada@email.com"
               onChange={handleChange}
+              disabled={isSubmitting}
             />
           </label>
 
@@ -80,11 +86,12 @@ function RegisterPage() {
               value={formData.password}
               placeholder="******"
               onChange={handleChange}
+              disabled={isSubmitting}
             />
           </label>
 
           <button className={styles.button} type="submit">
-            Registrarme
+            {isSubmitting ? "Cargando..." : "Registrarme"}
           </button>
         </form>
       </section>
